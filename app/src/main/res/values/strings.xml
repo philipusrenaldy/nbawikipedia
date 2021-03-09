@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NBA Teams Info</string>
+    <string name="about">About</string>
+    <string name="teamname">Boston Celstics</string>
+    <string name="teamdetails">One of the Greatest NBA Francise ...</string>
+    <string name="header">NBA Teams Information</string>
+    <string name="aboutteam">Teague has scored 10 or more points seven times this season. Thursday was his most efficient shooting effort of the season, as it was the first time he did not miss multiple field-goal attempts. Teague will occasionally supply adequate fantasy value despite being Boston\'s tertiary point guard (behind Kemba Walker and Payton Pritchard).</string>
+    <string name="openingtitle">Hello World</string>
+    <string name="nama">Philipus Kristian Renaldy</string>
+    <string name="email">philipusrenaldy@gmail.com</string>
+</resources>

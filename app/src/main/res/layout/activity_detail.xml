@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nbablue"
+    android:fillViewport="true"
+    tools:context=".Detail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/teamimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:src="@drawable/boston" />
+
+        <View
+            android:id="@+id/batasbiru"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/nbablue"
+            app:layout_constraintTop_toBottomOf="@+id/teamimage"
+            tools:layout_editor_absoluteX="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/batasbiru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                layout="@layout/teamtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="315dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/batasmerah"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/nbared"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"/>
+
+        <TextView
+            android:id="@+id/teamprofile"
+            style="@style/textnormal"
+            android:layout_width="0dp"
+            android:layout_margin="15dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            tools:text="Teague has scored 10 or more points seven times this season. Thursday was his most efficient shooting effort of the season, as it was the first time he did not miss multiple field-goal attempts. Teague will occasionally supply adequate fantasy value despite being Boston\'s tertiary point guard (behind Kemba Walker and Payton Pritchard)." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
