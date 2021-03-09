@@ -1,5 +1,6 @@
 package com.submission.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -26,16 +27,16 @@ class Adapter (private val adapterlist: ArrayList<Model>):
 
     override fun onBindViewHolder(holder: Adapter.Viewholder, position: Int) {
         holder.name.text = adapterlist[position].nama
-        holder.desc.text = "${adapterlist[position].profile.substring(0, 30)}..."
+        holder.desc.text = adapterlist[position].profile
         Glide.with(holder.itemView.context)
                 .load(adapterlist[position].image)
                 .into(holder.teamlogo)
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, Detail::class.java)
             intent.putExtra(Detail.TNAME, adapterlist[position].nama)
-            intent.putExtra(Detail.TDETAIL, adapterlist[position].profile)
+            intent.putExtra(Detail.TDESC, adapterlist[position].profile)
             intent.putExtra(Detail.IMAGE, adapterlist[position].image)
-            intent.putExtra(Detail.TDESC, adapterlist[position].desc)
+            intent.putExtra(Detail.TDETAIL, adapterlist[position].desc)
             holder.itemView.context.startActivity(intent)
         }
     }
