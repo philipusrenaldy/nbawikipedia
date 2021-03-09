@@ -40,7 +40,6 @@
 
     <TextView
         android:id="@+id/namatim"
-        style="@style/textnormal"
         android:fontFamily="@font/poppins_regular"
         android:layout_width="154dp"
         android:layout_height="40dp"
@@ -59,7 +58,8 @@
 
     <TextView
         android:id="@+id/desc"
-        style="@style/textnormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/white"
